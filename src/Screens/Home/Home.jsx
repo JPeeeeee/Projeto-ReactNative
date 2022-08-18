@@ -11,7 +11,7 @@ export default function Home({ route, navigation }){
             <Text>{text}</Text>
             <TouchableOpacity onPress={() => null}>
                 <View style={style.button}>
-                    <Text style={{color: 'white', fontWeight: '500'}}>Oi carina</Text>
+                    <Text style={{color: 'white', fontWeight: '500'}}>Oi carina!</Text>
                 </View>
             </TouchableOpacity>
         </View>
