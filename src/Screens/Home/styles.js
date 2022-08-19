@@ -7,6 +7,13 @@ const style = StyleSheet.create({
         backgroundColor: theme.colors.creamWhite,
         alignItems: 'center'
     },
+    
+    image: {
+        height: 200,
+        width: 200,
+        marginTop: -20,
+        marginBottom: 60
+    }
 })
 
 export default style

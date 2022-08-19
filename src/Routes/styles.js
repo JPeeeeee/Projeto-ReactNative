@@ -16,7 +16,7 @@ const headerStyle = {
     },
 
     Home: {
-        title: 'Você está em casa.',
+        title: 'Top 20 gatos',
         headerStyle:{
           backgroundColor: theme.colors.creamWhite,
         },

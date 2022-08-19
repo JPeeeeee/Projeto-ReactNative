@@ -8,7 +8,7 @@ const style = StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center'
     },
-    
+
     input: {
         backgroundColor: theme.colors.pureWhite,
         width: 250,
