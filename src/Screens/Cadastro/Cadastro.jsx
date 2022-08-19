@@ -2,11 +2,11 @@ import React from "react";
 import { View, Text, TouchableOpacity } from 'react-native';
 import style from "./styles";
 
-export default function Home({ navigation }){
+export default function Cadastro({ navigation }){
 
     return (
         <View style={style.container}>
-            <Text>Página Home</Text>
+            <Text>Página Cadastro</Text>
             <TouchableOpacity>
 
             </TouchableOpacity>

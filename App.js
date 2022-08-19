@@ -1,36 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import Splash from './src/Screens/Splash/Splash';
-import Home from './src/Screens/Home/Home';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import { 
+  useFonts,
+  Poppins_100Thin,
+  Poppins_300Light,
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_600SemiBold,
+  Poppins_700Bold } from '@expo-google-fonts/poppins';
+import Routes from './src/Routes/Routes';
 
-const Stack = createNativeStackNavigator()
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Poppins_100Thin,
+    Poppins_300Light,
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_600SemiBold,
+    Poppins_700Bold
+  })
+
+
+  if (!fontsLoaded){
+    return null
+  }
+    
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Splash" component={Splash} options={style.splash} />
-        <Stack.Screen name="Home" component={Home} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+      <Routes/>
+    );
 }
 
-const style = {
-  splash: {
-    title: 'Welcome',
-    headerStyle:{
-      backgroundColor: '#2D2A20',
-    },
-    headerTitleStyle: {
-      color: 'white',
-      fontWeight: 'bold',
-      fontSize: 25
-    },
-    headerTitleAlign: 'center',
-    statusBarStyle: 'inverted',
-    statusBarTranslucent: true
-  }
-}
+
