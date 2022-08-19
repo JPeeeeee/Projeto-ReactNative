@@ -1,24 +1,78 @@
 import React from "react";
-import { View, Text, FlatList, SafeAreaView } from 'react-native';
+import { View, Text, FlatList, SafeAreaView, StyleSheet } from 'react-native';
 import style from "./styles";
 
 const DATA = [
-    {"count":1154,"next":"https://pokeapi.co/api/v2/pokemon?offset=20&limit=20","previous":null,"results":[{"name":"bulbasaur","url":"https://pokeapi.co/api/v2/pokemon/1/"},{"name":"ivysaur","url":"https://pokeapi.co/api/v2/pokemon/2/"},{"name":"venusaur","url":"https://pokeapi.co/api/v2/pokemon/3/"},{"name":"charmander","url":"https://pokeapi.co/api/v2/pokemon/4/"},{"name":"charmeleon","url":"https://pokeapi.co/api/v2/pokemon/5/"},{"name":"charizard","url":"https://pokeapi.co/api/v2/pokemon/6/"},{"name":"squirtle","url":"https://pokeapi.co/api/v2/pokemon/7/"},{"name":"wartortle","url":"https://pokeapi.co/api/v2/pokemon/8/"},{"name":"blastoise","url":"https://pokeapi.co/api/v2/pokemon/9/"},{"name":"caterpie","url":"https://pokeapi.co/api/v2/pokemon/10/"},{"name":"metapod","url":"https://pokeapi.co/api/v2/pokemon/11/"},{"name":"butterfree","url":"https://pokeapi.co/api/v2/pokemon/12/"},{"name":"weedle","url":"https://pokeapi.co/api/v2/pokemon/13/"},{"name":"kakuna","url":"https://pokeapi.co/api/v2/pokemon/14/"},{"name":"beedrill","url":"https://pokeapi.co/api/v2/pokemon/15/"},{"name":"pidgey","url":"https://pokeapi.co/api/v2/pokemon/16/"},{"name":"pidgeotto","url":"https://pokeapi.co/api/v2/pokemon/17/"},{"name":"pidgeot","url":"https://pokeapi.co/api/v2/pokemon/18/"},{"name":"rattata","url":"https://pokeapi.co/api/v2/pokemon/19/"},{"name":"raticate","url":"https://pokeapi.co/api/v2/pokemon/20/"}]}
-]
+  {
+    id:"1",
+    title:"Data Structures"
+  },
+  {
+    id:"2",
+    title:"STL"
+  },
+  {
+    id:"3",
+    title:"C++"
+  },
+  {
+    id:"4",
+    title:"Java"
+  },
+  {
+    id:"5",
+    title:"Python"
+  },
+  {
+    id:"6",
+    title:"CP"
+  },
+  {
+    id:"7",
+    title:"ReactJs"
+  },
+  {
+    id:"8",
+    title:"NodeJs"
+  },
+  {
+    id:"9",
+    title:"MongoDb"
+  },
+  {
+    id:"10",
+    title:"ExpressJs"
+  },
+  {
+    id:"11",
+    title:"PHP"
+  },
+  {
+    id:"12",
+    title:"MySql"
+  },
+];
+
+const Item = ({title}) => {
+    return( 
+      <View style={style.item}>
+        <Text>{title}</Text>
+      </View>
+    );
+}
 
 export default function Home({ navigation }){
+    const renderItem = ({item})=>( 
+    <Item title={item.title}/>
+    );
 
     return (
-        <SafeAreaView style={style.container}>
-            <FlatList
-                data={DATA}
-                keyExtractor={item=>item.name}
-                renderItem={({ item }) => {
-                    <Text>
-                        {item.name}
-                    </Text>
-                }}
-            />
-        </SafeAreaView>
-    )
+    <View style={style.container}>
+        <FlatList
+            data={DATA}
+            renderItem={renderItem}
+            keyExtractor={item => item.id}
+        />
+    </View>
+    );
 }

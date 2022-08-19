@@ -3,16 +3,18 @@ import theme from "../../Global/theme";
 
 const style = StyleSheet.create({
     container: {
-        flex: 1,
         backgroundColor: theme.colors.creamWhite,
-        alignItems: 'center'
+        textAlign: 'center'
     },
     
-    image: {
-        height: 200,
-        width: 200,
-        marginTop: -20,
-        marginBottom: 60
+    item: {
+        height: 50,
+        margin: 10,
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: theme.colors.pureWhite,
+        borderRadius: 10
     }
 })
 
