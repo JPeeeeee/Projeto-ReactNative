@@ -53,6 +53,18 @@ const DATA = [
   },
 ];
 
+/*const [isLoading, setLoading] = useState(true);
+const [data, setData] = useState([]);
+console.log(data);
+
+useEffect(() => {
+  fetch('https://raw.githubusercontent.com/adhithiravi/React-Hooks-Examples/master/testAPI.json')
+    .then((response) => response.json())
+    .then((json) => setData(json))
+    .catch((error) => console.error(error))
+    .finally(() => setLoading(false));
+}, []); */
+
 const Item = ({title}) => {
     return( 
       <View style={style.item}>
