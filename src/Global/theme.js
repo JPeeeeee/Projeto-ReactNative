@@ -1,11 +1,10 @@
 const theme = {
     fonts: {
-        fina: 'Poppins_100Thin',
-        leve: 'Poppins_300Light',
-        regular: 'Poppins_400Regular',
-        media: 'Poppins_500Medium',
-        semiBold: 'Poppins_600SemiBold',
-        bold: 'Poppins_700Bold'
+        fina: 'Poppins-Thin',
+        leve: 'Poppins-Light',
+        regular: 'Poppins-Regular',
+        media: 'Poppins-Medium',
+        bold: 'Poppins-Bold'
     },
 
     colors: {

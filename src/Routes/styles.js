@@ -2,28 +2,28 @@ import theme from "../Global/theme"
 
 const headerStyle = {
     Login: {
-      title: 'Faça login.',
+      title: 'Faça o Login.',
       headerStyle:{
         backgroundColor: theme.colors.creamWhite,
       },
       headerTitleStyle: {
         color: theme.colors.graphite,
-        fontWeight: theme.fonts.media,
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: theme.fonts.bold
       },
       headerTitleAlign: 'center',
       statusBarTranslucent: true
     },
 
     Home: {
-        title: 'Top 20 gatos',
+        title: '20 gatos massa',
         headerStyle:{
           backgroundColor: theme.colors.creamWhite,
         },
         headerTitleStyle: {
           color: theme.colors.graphite,
-          fontWeight: theme.fonts.media,
-          fontSize: 20
+          fontSize: 20,
+          fontFamily: theme.fonts.bold
         },
         headerTitleAlign: 'center',
         statusBarTranslucent: true
@@ -36,8 +36,8 @@ const headerStyle = {
         },
         headerTitleStyle: {
           color: theme.colors.graphite,
-          fontWeight: theme.fonts.media,
-          fontSize: 20
+          fontSize: 20,
+          fontFamily: theme.fonts.bold
         },
         headerTitleAlign: 'center',
         statusBarTranslucent: true

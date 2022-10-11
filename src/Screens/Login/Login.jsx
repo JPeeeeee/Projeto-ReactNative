@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./styles";
-import { View, TouchableOpacity, Image, TextInput } from "react-native";
+import { View, TouchableOpacity, Image, TextInput, Text } from "react-native";
 import Button from "../../Components/Button/Button";
 
 export default function Login({ navigation }){

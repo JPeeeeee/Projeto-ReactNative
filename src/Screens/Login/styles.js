@@ -25,7 +25,7 @@ const style = StyleSheet.create({
     buttons: {
         height: 50,
         flexDirection: 'row',
-        marginTop: 30
+        marginTop: 30,
     },
 
     image: {
@@ -33,6 +33,11 @@ const style = StyleSheet.create({
         width: 200,
         marginTop: -20,
         marginBottom: 60
+    },
+
+    text: {
+        margin: 10,
+        fontFamily: theme.fonts.bold
     }
 })
 
